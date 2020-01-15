@@ -1,5 +1,6 @@
 import React from 'react';
 import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,22 +9,16 @@ import {
 } from "react-router-dom";
 import './App.css';
 
-const HatsPage = () => (
-  <h1>HATS PAGE</h1>
-);
-
 function App() {
   return (
     <Router>
       <div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/">
             <HomePage></HomePage>
           </Route>
-          <Route path="/hats">
-            <HatsPage></HatsPage>
+          <Route path="/shop">
+            <ShopPage></ShopPage>
           </Route>
         </Switch>
       </div>
