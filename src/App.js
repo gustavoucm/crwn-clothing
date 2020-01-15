@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,6 +13,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <Header></Header>
       <div>
         <Switch>
           <Route exact path="/">
@@ -24,18 +26,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 export default App;
